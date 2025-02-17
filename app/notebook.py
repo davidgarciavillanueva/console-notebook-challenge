@@ -23,10 +23,18 @@ class Note:
 
 
     def __str__(self):
-        Date: {creation_date}
+        self. Date: {creation_date}
         {title}: {text: }
         pass
 
 class Notebook:
     def __init__(self,notes :list[Note] ):
         self.notes :list[Note] = []
+
+    def add_notes (self,title:str,text:str,importance:str):
+        self.title = title
+        self.text = text
+        self.importance = importance
+        self.notes.append(Note(title,text,importance))
+
+
